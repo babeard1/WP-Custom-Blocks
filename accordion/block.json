@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "custom-block-toolkit/accordion",
+  "version": "1.0.0",
+  "title": "Interactive Accordion",
+  "category": "custom-block-toolkit",
+  "icon": "list-view",
+  "description": "An interactive accordion with expandable/collapsible items.",
+  "keywords": ["accordion", "faq"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "title": "First Item",
+          "content": "Add your content here...",
+          "isOpen": false
+        }
+      ]
+    }
+  },
+  "textdomain": "custom-block-toolkit",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
