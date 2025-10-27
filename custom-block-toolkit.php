@@ -22,9 +22,26 @@ define( 'CUSTOM_BLOCK_TOOLKIT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CUSTOM_BLOCK_TOOLKIT_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * Initialize the plugin
+ * Add custom block category
+ */
+function custom_block_toolkit_category( $categories ) {
+    return array_merge(
+        array(
+            array(
+                'slug'  => 'custom-block-toolkit',
+                'title' => __( 'Custom Block Toolkit', 'custom-block-toolkit' ),
+                'icon'  => 'admin-customizer',
+            ),
+        ),
+        $categories
+    );
+}
+add_filter( 'block_categories_all', 'custom_block_toolkit_category' );
+
+/**
+ * Initialize plugin and register block(s)
  */
 function custom_block_toolkit_init() {
-    // We'll add block registration here in the next step
+    register_block_type( CUSTOM_BLOCK_TOOLKIT_PATH . 'build/accordion' );
 }
 add_action( 'init', 'custom_block_toolkit_init' );
