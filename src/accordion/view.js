@@ -1,8 +1,3 @@
-/**
-
- * This file handles the expand/collapse functionality
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     const accordionItems = document.querySelectorAll('[data-accordion-item]');
 

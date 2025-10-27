@@ -8,7 +8,7 @@ export default function Edit({ attributes, setAttributes }) {
     const { items } = attributes;
     const blockProps = useBlockProps();
 
-    // Add a new accordion item
+    // Add new item
     const addItem = () => {
         const newItems = [
             ...items,
@@ -34,7 +34,6 @@ export default function Edit({ attributes, setAttributes }) {
         setAttributes({ items: newItems });
     };
 
-    // Update item content
     const updateContent = (index, newContent) => {
         const newItems = [...items];
         newItems[index].content = newContent;
