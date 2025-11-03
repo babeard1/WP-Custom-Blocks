@@ -18,7 +18,7 @@
       "default": [
         {
           "title": "First Item",
-          "content": "Add your content here...",
+          "content": "",
           "isOpen": false
         }
       ]

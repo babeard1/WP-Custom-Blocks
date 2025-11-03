@@ -14,7 +14,7 @@ export default function Edit({ attributes, setAttributes }) {
             ...items,
             {
                 title: __('New Item', 'custom-block-toolkit'),
-                content: __('Add your content here...', 'custom-block-toolkit'),
+                content: __('', 'custom-block-toolkit'),
                 isOpen: false
             }
         ];
@@ -63,6 +63,7 @@ export default function Edit({ attributes, setAttributes }) {
                         </div>
                         <RichText
                             tagName="div"
+                            multiline="p"
                             value={item.content}
                             onChange={(newContent) => updateContent(index, newContent)}
                             placeholder={__('Accordion content...', 'custom-block-toolkit')}

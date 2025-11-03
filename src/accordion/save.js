@@ -28,7 +28,8 @@ export default function Save({ attributes }) {
                         >
                             <div className="accordion-content-inner">
                                 <RichText.Content 
-                                    tagName="div" 
+                                    tagName="div"
+                                    multiline="p"
                                     value={item.content} 
                                 />
                             </div>
